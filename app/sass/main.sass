@@ -1,0 +1,96 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.wrapper
+	width: 100vw // Задание 100% ширины окна
+	height: 100vh // Задание 100% высоты окна
+	min-width: 1024px // Минимальная ширина при которой должен появляться скролл
+	min-height: 600px // Минимальная высота при которой появляется скролл
+	overflow: auto
+
+.top
+	background-color: #000
+	width: 100%
+	min-width: 1024px
+	height: 66%
+	display: flex
+	align-items: flex-end
+	justify-content: center
+	padding-bottom: 43px
+
+.bottom
+	width: 100%
+	min-width: 1024px
+	height: 34%
+	padding: 26px 0 20px
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+
+.nav
+	text-align: center
+
+.nav__link
+	color: #000000
+	font-size: 14px	
+	text-transform: uppercase
+	display: inline-block
+	margin-right: 37px
+	&:last-child
+		margin-right: 0
+	&:hover
+		text-decoration: none
+		color: $text
+
+.copyright
+	text-align: center
+	color: rgb(148, 148, 148)
+	font-size: 11px
+	text-transform: uppercase
+	letter-spacing: 0.06em
+
+.copyright__link	
+	color: inherit
+	text-decoration: underline
+	&:hover
+		color: $text
+
+@import "media" // Always at the end
+
